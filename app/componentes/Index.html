@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+   <link rel="shorcut icon" type="image/x-icon" class="img" href="../imagenes/favicon.ico">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Formulario Basico con html Vue js</title>
+</head>
+
+<body>
+ <div id="app">
+   <h1>{{titulo}}</h1>
+   <input type="text" v-model="NuevaActividad">  
+   <button @click="agregarActividad">Agregar</button>
+   <ul>
+     <li v-for="Actividad1 in Actividades1" :key="Actividad1" >{{Actividad1.tarea}}</li>
+   </ul>
+   <br/>
+   <h1>Datos Personas</h1>
+   <label>Nombre:</label>
+   <input type="text" v-model="NuevoEmpleado.Nombre">  
+   <br/>
+   <label>Edad:</label>
+   <input type="number" v-model="NuevoEmpleado.Edad">  
+   <br/>
+   <label>Cargo:</label>
+   <input type="text" v-model="NuevoEmpleado.Cargo">  
+
+   <button @click="agregarPersona">Agregar</button>
+   <ul>
+     <li v-for="InfoPersona of InfoPersonas"> {{InfoPersona.Nombre}} - Cargo:{{InfoPersona.Cargo}} 
+        <span v-if="InfoPersona.Cargo ==='Lider'">Es el lider</span>
+     </li>     
+   </ul>
+    
+   <h4>TOTAL {{total}}</h4>
+   
+
+ </div>
+
+ <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+ <script src="01.js"></script>
+</body>
+</html>
