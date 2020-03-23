@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+   <link rel="shorcut icon" type="image/x-icon" class="img" href="../imagenes/favicon.ico">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Formulario Basico con html Vue js</title>
+</head>
+
+<body>
+ <div id="app">
+  
+   <div class="form-container">
+    <div class="form-header">
+       <h1>{{titulo}}</h1>
+    </div>
+    <div class="form-body"> 
+        <div class="container">  
+         <div class="row">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label for="snombre">Nombre(s)</label>
+                    <input type="text" v-model="NuevoDatosBasicos.Nombre" class="form-control" id="snombre" placeholder="Nombres">
+                 </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label for="sapellido">Apellido(s)</label>
+                    <input type="text" v-model="NuevoDatosBasicos.Apellido" class="form-control" id="sapellido" placeholder="Apellidos">
+                 </div>                
+            </div>      
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label for="nedad">Edad</label>
+                    <input type="number" v-model="NuevoDatosBasicos.Edad" class="form-control" id="nedad" placeholder="45">
+                 </div>                
+            </div>  
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label for="sestadocivil">Estado Civil</label>
+                    <select v-model="EstadoCivil" class="form-control" id="sestadocivil">
+                         <option v-for="EstadoCivil of ListaEstadoCivil">{{EstadoCivil.estado}}</option>                        
+                      </select>
+                 </div>                
+            </div>      
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label for="ssexo">Sexo</label>
+                    <select v-model="lsexo" class="form-control" id="ssexo">
+                         <option v-for="lsexo of ListaSexo">{{lsexo.sexo}}</option>                        
+                      </select>
+                 </div>                
+            </div>      
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label for="stelefono">telefonos</label>
+                    <input type="text" v-model="NuevoDatosBasicos.Telefono" class="form-control" id="stelefono" placeholder="316-3740440">
+                 </div>                
+            </div>  
+        </div>
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="form-group">
+                    <label for="scorreo">Correo</label>
+                    <input type="text" v-model="NuevoDatosBasicos.correo" class="form-control" id="scorreo" placeholder="xxxxx@dominio.com">
+                 </div>                
+            </div> 
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="form-group">                    
+                    <button @click="agregarDatos">Agregar</button>
+                 </div>                
+            </div>  
+        </div>
+        <div class="container bg-ligth ">
+            <div class="divider-40"></div>
+            <div class="col-sm-12">
+                <table class="table-striped table-bordered table-sm font-size-sm">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th></th>                           
+                            <th><a href="#">Nombre(s)</a></th>
+                            <th><a href="#">Apellido(s)</a></th>
+                            <th><a href="#">Edad</a></th>
+                            <th><a href="#">Sexo</a></th>
+                            <th><a href="#">Estado Civil</a></th>
+                            <th><a href="#">Telefono</a></th>
+                            <th><a href="#">Correo</a></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr v-for="datos of DatosBasicos_TD">
+                            
+                            <td><input disabled="enabled" class="btn btn-link btn-sm" type="button" value="Anular" style="font-size: 13px;" /></td>
+                            <td><input disabled="enabled" class="btn btn-link btn-sm" type="button" value="Actualizar" style="font-size: 13px;" /></td>
+                            <td>{{datos.Nombre}}</td>
+                            <td>{{datos.Apellido}}</td>
+                            <td>{{datos.Edad}}</td>
+                            <td>{{datos.sexo}}</td>
+                            <td>{{datos.EstadoCivil}}</td>
+                            <td>{{datos.Telefono}}</td>
+                            <td>{{datos.correo}}</td>
+                        </tr>
+                   </tbody>
+                </table> 
+            </div>
+        </div>
+
+    </div>
+</div>
+    <div class="form-footer">
+        <div class="col-sm-12">
+         
+        </div>
+    </div>
+   </div>   
+   
+
+ </div>
+ <script src="../script/js/bootstrap.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+ <script src="../script/01.js"></script>
+
+</body>
+</html>

@@ -3,7 +3,7 @@
 const app = new Vue ({
   el: '#app',
   data: {
-    titulo: 'Hola Mundo con vue',    
+    titulo: 'Datos Basicos',    
     Actividades1: [
         {tarea:'Desarrollo'},
         {tarea:'Pruebas'},
@@ -18,10 +18,48 @@ const app = new Vue ({
     NuevoEmpleado:[
       {Nombre:'',Edad:0,Cargo:''}
     ],
+    NuevoDatosBasicos:[
+      {Nombre:'', Apellido:'', Edad:0, sexo:'',EstadoCivil:'',Telefono:'',correo:''}
+    ],
+    DatosBasicos_TD:
+    [
+      {Nombre:'', Apellido:'', Edad:0, sexo:'',EstadoCivil:'',Telefono:'',correo:''}
+    ],
+
+    ListaEstadoCivil:[
+      {estado:'Soltero'},
+      {estado:'Casado'},
+      {estado:'Divorciado'},
+      {estado:'Otros'}
+    ],
+    ListaSexo :[
+      {sexo:'Masculino'},
+      {sexo:'Femenino'},
+      {sexo:'Otros'}
+    ],
+    Seleccion:'',
     total: 0
   },
   methods:{
 
+    agregarDatos(){
+      this.DatosBasicos_TD.push({
+        Nombre:this.NuevoDatosBasicos.Nombre, 
+        Apellido:this.NuevoDatosBasicos.Apellido,
+        Edad:this.NuevoDatosBasicos.Edad,
+        sexo: this.lsexo,
+        EstadoCivil: this.EstadoCivil,
+        Telefono:this.NuevoDatosBasicos.Telefono,
+        correo:this.NuevoDatosBasicos.correo
+    });
+
+    this.NuevoDatosBasicos.Nombre='';
+    this.NuevoDatosBasicos.Apellido='';
+    this.NuevoDatosBasicos.Edad=0;
+    this.NuevoDatosBasicos.Telefono='';
+    this.NuevoDatosBasicos.correo ='';
+     
+    },
      agregarPersona () {
        
        this.InfoPersonas.push({
