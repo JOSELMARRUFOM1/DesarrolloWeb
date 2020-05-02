@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BetaSqlModelStoreContainer" CdmEntityContainer="BetaSqlEntities">
+    <EntitySetMapping Name="EVALUACION_TED">
+      <EntityTypeMapping TypeName="BetaSqlModel.EVALUACION_TED">
+        <MappingFragment StoreEntitySet="EVALUACION_TED">
+          <ScalarProperty Name="CODEVALUACION" ColumnName="CODEVALUACION" />
+          <ScalarProperty Name="CODEVALUACIONTIPO" ColumnName="CODEVALUACIONTIPO" />
+          <ScalarProperty Name="CODEVALUACIONINTERPRETACION" ColumnName="CODEVALUACIONINTERPRETACION" />
+          <ScalarProperty Name="EVALUACION" ColumnName="EVALUACION" />
+          <ScalarProperty Name="FECHAINI" ColumnName="FECHAINI" />
+          <ScalarProperty Name="FECHAFIN" ColumnName="FECHAFIN" />
+          <ScalarProperty Name="FECHACIERRE" ColumnName="FECHACIERRE" />
+          <ScalarProperty Name="OBS" ColumnName="OBS" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="CODEVALUACIONCLASE" ColumnName="CODEVALUACIONCLASE" />
+          <ScalarProperty Name="ESVERSIONANTERIOR" ColumnName="ESVERSIONANTERIOR" />
+          <ScalarProperty Name="fechaconcertacion" ColumnName="fechaconcertacion" />
+          <ScalarProperty Name="fechaseguimiento1" ColumnName="fechaseguimiento1" />
+          <ScalarProperty Name="fechaseguimiento2" ColumnName="fechaseguimiento2" />
+          <ScalarProperty Name="fechacalificacion" ColumnName="fechacalificacion" />
+          <ScalarProperty Name="fechacalificacion2" ColumnName="fechacalificacion2" />
+          <ScalarProperty Name="fechaseguimiento3" ColumnName="fechaseguimiento3" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

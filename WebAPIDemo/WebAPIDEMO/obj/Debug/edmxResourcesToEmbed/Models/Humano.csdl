@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BetaSqlModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="EVALUACION_TED">
+    <Key>
+      <PropertyRef Name="CODEVALUACION" />
+    </Key>
+    <Property Name="CODEVALUACION" Type="Decimal" Precision="4" Scale="0" Nullable="false" />
+    <Property Name="CODEVALUACIONTIPO" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="CODEVALUACIONINTERPRETACION" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
+    <Property Name="EVALUACION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FECHAINI" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FECHAFIN" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FECHACIERRE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="OBS" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ESTADO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CODEVALUACIONCLASE" Type="Decimal" Precision="5" Scale="0" Nullable="false" />
+    <Property Name="ESVERSIONANTERIOR" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="fechaconcertacion" Type="DateTime" Precision="3" />
+    <Property Name="fechaseguimiento1" Type="DateTime" Precision="3" />
+    <Property Name="fechaseguimiento2" Type="DateTime" Precision="3" />
+    <Property Name="fechacalificacion" Type="DateTime" Precision="3" />
+    <Property Name="fechacalificacion2" Type="DateTime" Precision="3" />
+    <Property Name="fechaseguimiento3" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="BetaSqlEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="EVALUACION_TED" EntityType="Self.EVALUACION_TED" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BetaSqlModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="EVALUACION_TED">
+    <Key>
+      <PropertyRef Name="CODEVALUACION" />
+    </Key>
+    <Property Name="CODEVALUACION" Type="numeric" Precision="4" Scale="0" Nullable="false" />
+    <Property Name="CODEVALUACIONTIPO" Type="numeric" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="CODEVALUACIONINTERPRETACION" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+    <Property Name="EVALUACION" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FECHAINI" Type="datetime" Nullable="false" />
+    <Property Name="FECHAFIN" Type="datetime" Nullable="false" />
+    <Property Name="FECHACIERRE" Type="datetime" Nullable="false" />
+    <Property Name="OBS" Type="varchar" MaxLength="500" />
+    <Property Name="ESTADO" Type="char" MaxLength="1" />
+    <Property Name="CODEVALUACIONCLASE" Type="numeric" Precision="5" Scale="0" Nullable="false" />
+    <Property Name="ESVERSIONANTERIOR" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="fechaconcertacion" Type="datetime" />
+    <Property Name="fechaseguimiento1" Type="datetime" />
+    <Property Name="fechaseguimiento2" Type="datetime" />
+    <Property Name="fechacalificacion" Type="datetime" />
+    <Property Name="fechacalificacion2" Type="datetime" />
+    <Property Name="fechaseguimiento3" Type="datetime" />
+  </EntityType>
+  <EntityContainer Name="BetaSqlModelStoreContainer">
+    <EntitySet Name="EVALUACION_TED" EntityType="Self.EVALUACION_TED" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

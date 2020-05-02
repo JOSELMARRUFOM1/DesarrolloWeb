@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="BetaSqlModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="EVALUACION_TED">
+          <Key>
+            <PropertyRef Name="CODEVALUACION" />
+          </Key>
+          <Property Name="CODEVALUACION" Type="numeric" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="CODEVALUACIONTIPO" Type="numeric" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="CODEVALUACIONINTERPRETACION" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="EVALUACION" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FECHAINI" Type="datetime" Nullable="false" />
+          <Property Name="FECHAFIN" Type="datetime" Nullable="false" />
+          <Property Name="FECHACIERRE" Type="datetime" Nullable="false" />
+          <Property Name="OBS" Type="varchar" MaxLength="500" />
+          <Property Name="ESTADO" Type="char" MaxLength="1" />
+          <Property Name="CODEVALUACIONCLASE" Type="numeric" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="ESVERSIONANTERIOR" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="fechaconcertacion" Type="datetime" />
+          <Property Name="fechaseguimiento1" Type="datetime" />
+          <Property Name="fechaseguimiento2" Type="datetime" />
+          <Property Name="fechacalificacion" Type="datetime" />
+          <Property Name="fechacalificacion2" Type="datetime" />
+          <Property Name="fechaseguimiento3" Type="datetime" />
+        </EntityType>
+        <EntityContainer Name="BetaSqlModelStoreContainer">
+          <EntitySet Name="EVALUACION_TED" EntityType="Self.EVALUACION_TED" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BetaSqlModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="EVALUACION_TED">
+          <Key>
+            <PropertyRef Name="CODEVALUACION" />
+          </Key>
+          <Property Name="CODEVALUACION" Type="Decimal" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="CODEVALUACIONTIPO" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="CODEVALUACIONINTERPRETACION" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="EVALUACION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FECHAINI" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FECHAFIN" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FECHACIERRE" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="OBS" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="ESTADO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="CODEVALUACIONCLASE" Type="Decimal" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="ESVERSIONANTERIOR" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="fechaconcertacion" Type="DateTime" Precision="3" />
+          <Property Name="fechaseguimiento1" Type="DateTime" Precision="3" />
+          <Property Name="fechaseguimiento2" Type="DateTime" Precision="3" />
+          <Property Name="fechacalificacion" Type="DateTime" Precision="3" />
+          <Property Name="fechacalificacion2" Type="DateTime" Precision="3" />
+          <Property Name="fechaseguimiento3" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="BetaSqlEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="EVALUACION_TED" EntityType="Self.EVALUACION_TED" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BetaSqlModelStoreContainer" CdmEntityContainer="BetaSqlEntities">
+          <EntitySetMapping Name="EVALUACION_TED">
+            <EntityTypeMapping TypeName="BetaSqlModel.EVALUACION_TED">
+              <MappingFragment StoreEntitySet="EVALUACION_TED">
+                <ScalarProperty Name="CODEVALUACION" ColumnName="CODEVALUACION" />
+                <ScalarProperty Name="CODEVALUACIONTIPO" ColumnName="CODEVALUACIONTIPO" />
+                <ScalarProperty Name="CODEVALUACIONINTERPRETACION" ColumnName="CODEVALUACIONINTERPRETACION" />
+                <ScalarProperty Name="EVALUACION" ColumnName="EVALUACION" />
+                <ScalarProperty Name="FECHAINI" ColumnName="FECHAINI" />
+                <ScalarProperty Name="FECHAFIN" ColumnName="FECHAFIN" />
+                <ScalarProperty Name="FECHACIERRE" ColumnName="FECHACIERRE" />
+                <ScalarProperty Name="OBS" ColumnName="OBS" />
+                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+                <ScalarProperty Name="CODEVALUACIONCLASE" ColumnName="CODEVALUACIONCLASE" />
+                <ScalarProperty Name="ESVERSIONANTERIOR" ColumnName="ESVERSIONANTERIOR" />
+                <ScalarProperty Name="fechaconcertacion" ColumnName="fechaconcertacion" />
+                <ScalarProperty Name="fechaseguimiento1" ColumnName="fechaseguimiento1" />
+                <ScalarProperty Name="fechaseguimiento2" ColumnName="fechaseguimiento2" />
+                <ScalarProperty Name="fechacalificacion" ColumnName="fechacalificacion" />
+                <ScalarProperty Name="fechacalificacion2" ColumnName="fechacalificacion2" />
+                <ScalarProperty Name="fechaseguimiento3" ColumnName="fechaseguimiento3" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
